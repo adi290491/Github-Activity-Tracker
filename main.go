@@ -31,7 +31,7 @@ func main() {
 	}
 	log.Println("\n---Events---")
 	for _, event := range events {
-		fmt.Println(event.String())
+		fmt.Println(event)
 		if event.Type == "PushEvent" {
 			for _, commit := range event.Payload.Commits {
 				fmt.Printf("Author: %s, Commit: %s\n", commit.Author.Name, commit.Message)
